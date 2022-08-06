@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import AppsIcon from '@mui/icons-material/Apps';
 
 const Home = () => {
     return (
@@ -20,7 +21,7 @@ const Home = () => {
                     <Link to='/images'>
                         <p>Images</p>
                     </Link>
-                    {/* icon */}
+                    <AppsIcon />
                 </div>
             </div>
             <div className="home__body"></div>
