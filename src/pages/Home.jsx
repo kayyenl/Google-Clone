@@ -1,17 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
-        <div className='Home'>
-            <h1>hello there</h1>
+        <div className='home'>
             <div className="home__header">
                 <div className="home__header--left">
-                    {/* link */}
-                    {/* link */}
+                    <Link to='/about'>
+                        <p>About</p>
+                    </Link>
+                    <Link to='/store'>
+                        <p>Store</p>
+                    </Link>
                 </div>
                 <div className="home__header--right">
-                    {/* link */}
-                    {/* link */}
+                    <Link to='/gmail'>
+                        <p>Gmail</p>
+                    </Link>
+                    <Link to='/images'>
+                        <p>Images</p>
+                    </Link>
                     {/* icon */}
                 </div>
             </div>

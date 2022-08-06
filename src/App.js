@@ -6,13 +6,10 @@ import Home from "./pages/Home";
 function App() {
   return (
     <div className="App">
-      <h1>hey lets build the google clone! 🚀 </h1>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} /> 
-          <Route path="/search">
-            <h1>This is the search page</h1>
-          </Route> 
+          <Route path="/search" element={<h1>this is the search page!</h1>}/>
         </Routes>
       </Router>
     </div>
