@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -78,6 +79,17 @@ code {
   align-items: center;
   border: 1px solid lightgrey;
   height: 30px;
-  padding: 10px 20px;
+  padding: 25px 20px;
   border-radius: 999px;
+  margin: 0 auto;
+  width: 75vw;
+  margin-top: 40px;
+  max-width: 560px;
 }
+
+.search__input > input {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: medium;
+}
+
