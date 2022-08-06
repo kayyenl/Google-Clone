@@ -33,6 +33,12 @@ code {
 .home__header--left,
 .home__header--right {
   display: flex;
+  align-items: center;
+  min-width: 13vw;
+}
+
+.home__header--right {
+  justify-content: space-between;
 }
 
 .home__header a {
@@ -45,4 +51,8 @@ code {
 
 .home__header a:hover {
   text-decoration: underline;
+}
+
+.home__header--right > .MuiSvgIcon-root {
+  margin-right: 20px;
 }
