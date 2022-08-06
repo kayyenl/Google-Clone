@@ -3,6 +3,7 @@ import React from 'react';
 const Home = () => {
     return (
         <div className='Home'>
+            <h1>hello there</h1>
             <div className="home__header">
                 <div className="home__header--left">
                     {/* link */}
