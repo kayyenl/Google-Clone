@@ -9,9 +9,7 @@ function App() {
       <h1>hey lets build the google clone! 🚀 </h1>
       <Router>
         <Routes>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/" element={<Home />} /> 
         </Routes>
       </Router>
     </div>
