@@ -23,11 +23,15 @@ const Search = ({ hideButtons }) => {
             </div>
             
             {
-                hideButtons ? <></> :
-                <div className="search__buttons"> 
+                hideButtons ?
+                <div className="search__button--display-none"> 
                     <Button type='submit' variant='outlined' onClick={(event) => search(event)}>Google Search</Button>
                     <Button type='submit' variant='outlined'>I'm Feeling Lucky</Button>
-                </div> 
+                </div> :
+                <div className="search__buttons"> 
+                <Button type='submit' variant='outlined' onClick={(event) => search(event)}>Google Search</Button>
+                <Button type='submit' variant='outlined'>I'm Feeling Lucky</Button>
+            </div> 
             }
         </form>
     );
