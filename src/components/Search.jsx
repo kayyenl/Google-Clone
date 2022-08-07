@@ -4,7 +4,7 @@ import MicIcon from '@mui/icons-material/Mic';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 
-const Search = () => {
+const Search = ({ hideButtons }) => {
     const [input, setInput] = useState("")
     let navigate = useNavigate()
 
@@ -21,11 +21,14 @@ const Search = () => {
                 <input value={input} onChange={(event) => setInput(event.target.value)}/>
                 <MicIcon />
             </div>
-
-            <div className="search__buttons">
-                <Button type='submit' variant='outlined' onClick={(event) => search(event)}>Google Search</Button>
-                <Button type='submit' variant='outlined'>I'm Feeling Lucky</Button>
-            </div>
+            
+            {
+                hideButtons ? <></> :
+                <div className="search__buttons"> 
+                    <Button type='submit' variant='outlined' onClick={(event) => search(event)}>Google Search</Button>
+                    <Button type='submit' variant='outlined'>I'm Feeling Lucky</Button>
+                </div> 
+            }
         </form>
     );
 }
