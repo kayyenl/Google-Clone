@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
     const [input, setInput] = useState("")
+    let navigate = useNavigate()
 
     function search(event) {
         event.preventDefault();
         console.log('you searched >> ' + input)
+        navigate('/search')
     }
 
     return (
