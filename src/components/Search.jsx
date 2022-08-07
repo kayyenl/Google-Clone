@@ -8,10 +8,11 @@ const Search = () => {
 
     function search(event) {
         event.preventDefault();
+        console.log('you searched >> ' + input)
     }
 
     return (
-        <div className='search'>
+        <form className='search'>
             <div className="search__input">
                 <SearchIcon className="search__input--icon" />
                 <input value={input} onChange={(event) => setInput(event.target.value)}/>
@@ -19,10 +20,10 @@ const Search = () => {
             </div>
 
             <div className="search__buttons">
-                <Button variant='outlined' onClick={(event) => search(event)}>Google Search</Button>
-                <Button variant='outlined'>I'm Feeling Lucky</Button>
+                <Button type='submit' variant='outlined' onClick={(event) => search(event)}>Google Search</Button>
+                <Button type='submit' variant='outlined'>I'm Feeling Lucky</Button>
             </div>
-        </div>
+        </form>
     );
 }
 
