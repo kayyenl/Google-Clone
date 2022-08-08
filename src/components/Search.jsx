@@ -35,6 +35,6 @@ const Search = ({ hideButtons }) => {
             }
         </form>
     );
-}
+} 
 
 export default Search;
