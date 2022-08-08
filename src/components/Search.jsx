@@ -43,3 +43,4 @@ const Search = ({ hideButtons }) => {
 } 
 
 export default Search;
+ 
