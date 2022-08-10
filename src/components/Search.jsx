@@ -14,9 +14,11 @@ const Search = ({ hideButtons }) => {
     function search(event) {
         event.preventDefault();
         console.log('you searched >> ' + input)
+        navigate('/search')
         dispatch({ 
             type: actionTypes.SET_SEARCH_TERM,
-            term: input })
+            payload: input, 
+        })
     }
 
     return (
