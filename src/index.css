@@ -161,3 +161,7 @@ code {
   width: unset;
   max-width: unset;
 }
+
+.searchpage__options {
+  margin-top: 20px;
+}
