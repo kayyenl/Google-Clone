@@ -164,4 +164,31 @@ code {
 
 .searchpage__options {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  color: grey;
+}
+
+.searchpage__options--left,
+.searchpage__options--right {
+  display: flex;
+}
+
+.searchpage__options a {
+  text-decoration: none;
+  color: grey;
+}
+
+.searchpage__options--right {
+  margin-left: 80px;
+}
+
+.searchpage__option {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.searchpage__option a {
+  margin-left: 5px;
 }

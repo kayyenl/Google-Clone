@@ -58,10 +58,19 @@ const SearchPage = () => {
                                 <Link to="/more">More</Link>
                             </div>
                         </div>
-                        <div className="searchpage__options--right"></div>
-            </div> 
-                    </div>
+
+                        <div className="searchpage__options--right">
+                            <div className="searchpage__option">
+                                <Link to="/settings">Settings</Link>
+                            </div>
+                            <div className="searchpage__option">
+                                <Link to="/tools">Tools</Link>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
+            </div>
+
             <div className="searchpage__results">
                 {state.term}
             </div>
