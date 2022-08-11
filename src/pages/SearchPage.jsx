@@ -80,9 +80,10 @@ const SearchPage = () => {
                 {data?.items.map(item => (
                     <div className="searchpage__result">
                         <a href={item.link} className="searchpage__result--a">
-                            {item.pagemap?.cse_image?.src &&
+                            {(item.pagemap?.cse_image?.length > 0 &&
+                                item.pagemap?.cse_image[0]?.src) &&
                             (<img className='searchpage__result--image'
-                                src={item.pagemap?.cse_image[0]?.src}>
+                                src={item.pagemap.cse_image[0].src}>
                             </img>)
                             }
                            <span className='searchpage__result--link'> {item.displayLink} > </span> 
