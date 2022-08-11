@@ -13,10 +13,11 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const SearchPage = () => {
     const [state, dispatch] = useStateValue() // can be destructured
-    // const { data } = UseGoogleSearch(state.term)
-    
-    const data = Response
+    const { data } = UseGoogleSearch(state.term)
     console.log(data)
+    
+    const cock = Response
+    console.log(cock)
 
     return (
         <div className='searchpage'>
