@@ -73,7 +73,8 @@ const SearchPage = () => {
             {state.term && (
             <div className="searchpage__results">
                 <p className="searchpage__results--count">
-                    About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {state.term}
+                    About {data?.searchInformation.formattedTotalResults} results 
+                    ({data?.searchInformation.formattedSearchTime} seconds) for {state.term}
                 </p>
 
                 {data?.items.map(item => (
@@ -85,6 +86,6 @@ const SearchPage = () => {
             )}
         </div>
     );
-}
+} 
 
 export default SearchPage;
