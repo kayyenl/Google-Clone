@@ -14,10 +14,9 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 const SearchPage = () => {
     const [state, dispatch] = useStateValue() // can be destructured
     // const { data } = UseGoogleSearch(state.term)
-
+    
     const data = Response
     console.log(data)
-
 
     return (
         <div className='searchpage'>
@@ -71,9 +70,19 @@ const SearchPage = () => {
                 </div>
             </div>
 
+            {state.term && (
             <div className="searchpage__results">
-                {state.term}
+                <p className="searchpage__results--count">
+                    About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {state.term}
+                </p>
+
+                {data?.items.map(item => (
+                    <div className="searchpage__result">
+                        {item.displayLink}
+                    </div>
+                ))}
             </div>
+            )}
         </div>
     );
 }
