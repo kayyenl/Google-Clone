@@ -81,6 +81,7 @@ code {
 .search__input {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border: 1px solid lightgrey;
   height: 30px;
   padding: 25px 20px;
@@ -101,7 +102,7 @@ code {
 .search__input > input:focus {
   outline-width: 0;
 }
-
+ 
 .search__input--icon {
   color: rgb(132, 131, 131);
 }
