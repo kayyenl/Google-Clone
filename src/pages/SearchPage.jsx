@@ -16,8 +16,9 @@ const SearchPage = () => {
     const { data } = UseGoogleSearch(state.term)
     console.log(data)
     
-    const cock = Response
-    console.log(cock)
+    // MOCK API CALL
+    // const data = Response
+    // console.log(data)
 
     return (
         <div className='searchpage'>
