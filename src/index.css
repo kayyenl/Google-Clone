@@ -97,6 +97,7 @@ code {
   padding: 10px 20px;
   font-size: medium;
   border: none;
+  width: 80%;
 }
 
 .search__input > input:focus {
@@ -107,10 +108,10 @@ code {
   color: rgb(132, 131, 131);
 }
 
-.search__input > input:focus .search__input{
-  box-shadow: 10px 10px;
+.input__textbox:focus .search__input{
+  box-shadow: 10px 10px;  
 }
-
+ 
 .search__buttons {
   margin-top: 30px;
   display: flex;

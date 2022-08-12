@@ -25,7 +25,7 @@ const Search = ({ hideButtons }) => {
         <form className='search'>
             <div className="search__input">
                 <SearchIcon className="search__input--icon" />
-                <input value={input} onChange={(event) => setInput(event.target.value)}/>
+                <input className='input__textbox' value={input} onChange={(event) => setInput(event.target.value)}/>
                 <MicIcon />
             </div>
             
