@@ -10,15 +10,17 @@ import ImageIcon from '@mui/icons-material/Image';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import RoomIcon from '@mui/icons-material/Room';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const SearchPage = () => {
     const [state, dispatch] = useStateValue() // can be destructured
-    const { data } = UseGoogleSearch(state.term)
-    console.log(data)
+    // const { data } = UseGoogleSearch(state.term)
+    // console.log(data)
     
     // MOCK API CALL
-    // const data = Response
-    // console.log(data)
+    const data = Response
+    console.log(data)
 
     return (
         <div className='searchpage'>
@@ -72,14 +74,17 @@ const SearchPage = () => {
                 </div>
             </div>
 
-            {state.term && (
             <div className="searchpage__results">
                 <p className="searchpage__results--count">
-                    About {data?.searchInformation.formattedTotalResults} results 
-                    ({data?.searchInformation.formattedSearchTime} seconds) for {state.term}
+                    {data ? 
+                    <>
+                        About {data?.searchInformation.formattedTotalResults} results 
+                        ({data?.searchInformation.formattedSearchTime} seconds) for {state.term}
+                    </>: <Skeleton />
+                    }
                 </p>
 
-                {data?.items.map(item => (
+                {data ? data?.items.map(item => (
                     <div className="searchpage__result">
                         <a href={item.link} className="searchpage__result--a">
                             {(item.pagemap?.cse_image?.length > 0 &&
@@ -100,9 +105,27 @@ const SearchPage = () => {
                             {item.snippet}
                         </p>
                     </div>
+                )) : Array(10).fill(0).map(item => (
+                    <div className="searchpage__result">
+                        <a href={item.link} className="searchpage__result--a">
+                            <div className='searchpage__result--image'>
+                                <Skeleton height={20} width={20} />
+                            </div>
+                           <span className='searchpage__result--link'> <Skeleton /> </span> 
+                        </a>
+
+                        <a href={item.link} 
+                        className="searchpage__result--title">
+                            <h2> <Skeleton /> </h2>
+                        </a>
+
+                        <p className="searchpage__result--snippet">
+                            <Skeleton />
+                        </p>
+                    </div>
                 ))}
             </div>
-            )}
+         
         </div>
     );
 } 
