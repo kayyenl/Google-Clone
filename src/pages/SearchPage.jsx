@@ -19,7 +19,7 @@ const SearchPage = () => {
     // console.log(data)
     
     // MOCK API CALL
-    const data = Response
+    const data = null
     console.log(data)
 
     return (
