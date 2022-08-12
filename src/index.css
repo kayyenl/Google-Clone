@@ -240,5 +240,17 @@ code {
   height: 20px;
   width: 20px;
 }
-/* .searchpage */
-/* .searchpage */
+
+/* responsive for phones */
+@media(max-width: 400px) {
+  .home__header--left {
+    display: none;
+  }
+
+  .home__header--right {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+}
