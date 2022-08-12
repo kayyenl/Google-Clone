@@ -9,6 +9,7 @@ import { actionTypes } from '../reducer';
 const Search = ({ hideButtons, hasSearch }) => {
     const [state, dispatch] = useStateValue()
     const [input, setInput] = useState("")
+    const [hasEdit, setEdit] = useState(false)
     let navigate = useNavigate()
 
     function search(event) {
@@ -25,7 +26,10 @@ const Search = ({ hideButtons, hasSearch }) => {
         <form className='search'>
             <div className="search__input">
                 <SearchIcon className="search__input--icon" />
-                <input className='input__textbox' value={input || state.term} onChange={(event) => setInput(event.target.value)}/>
+                <input className='input__textbox' value={input || (hasEdit ? "" : state.term)} onChange={(event) => {
+                    setInput(event.target.value)
+                    setEdit(true) }
+                }/>
                 <MicIcon />
             </div>
             
