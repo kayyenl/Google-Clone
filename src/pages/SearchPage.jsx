@@ -30,7 +30,7 @@ const SearchPage = () => {
                 </Link>
 
                 <div className="searchpage__header--body">
-                    <Search hideButtons />
+                    <Search hideButtons hasSearch />
                     <div className="searchpage__options">
                         <div className="searchpage__options--left">
 

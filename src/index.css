@@ -253,5 +253,10 @@ code {
     margin: 0 auto;
   }
 
+  .home__body > img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
 
 }

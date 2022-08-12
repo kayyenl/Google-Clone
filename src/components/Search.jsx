@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import { actionTypes } from '../reducer';
 
-const Search = ({ hideButtons }) => {
+const Search = ({ hideButtons, hasSearch }) => {
     const [state, dispatch] = useStateValue()
     const [input, setInput] = useState("")
     let navigate = useNavigate()
@@ -25,7 +25,7 @@ const Search = ({ hideButtons }) => {
         <form className='search'>
             <div className="search__input">
                 <SearchIcon className="search__input--icon" />
-                <input className='input__textbox' value={input} onChange={(event) => setInput(event.target.value)}/>
+                <input className='input__textbox' value={input || state.term} onChange={(event) => setInput(event.target.value)}/>
                 <MicIcon />
             </div>
             
