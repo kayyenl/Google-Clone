@@ -17,7 +17,7 @@ const SearchPage = () => {
     const [state, dispatch] = useStateValue() // can be destructured
     const { data } = UseGoogleSearch(state.term)
     const newterm = state.term !== data?.queries.nextPage[0].searchTerms
-    console.log(data)
+    // console.log(data)
     
     // MOCK API CALL
     // const data = null
@@ -121,7 +121,7 @@ const SearchPage = () => {
                         </a>
 
                         <p className="searchpage__result--snippet">
-                            <Skeleton />
+                            <Skeleton count={2}/>
                         </p>
                     </div>
                 ))}
