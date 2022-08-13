@@ -15,12 +15,12 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 const SearchPage = () => {
     const [state, dispatch] = useStateValue() // can be destructured
-    // const { data } = UseGoogleSearch(state.term)
-    // console.log(data)
+    const { data } = UseGoogleSearch(state.term)
+    console.log(data)
     
     // MOCK API CALL
-    const data = Response
-    console.log(data)
+    // const data = null
+    // console.log(data)
 
     return (
         <div className='searchpage'>
