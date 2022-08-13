@@ -16,7 +16,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 const SearchPage = () => {
     const [state, dispatch] = useStateValue() // can be destructured
     const { data } = UseGoogleSearch(state.term)
-    const newterm = state.term == data.queries.nextPage[0].searchTerms
+    const newterm = state.term !== data?.queries.nextPage[0].searchTerms
     console.log(data)
     
     // MOCK API CALL
