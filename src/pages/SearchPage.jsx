@@ -16,6 +16,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 const SearchPage = () => {
     const [state, dispatch] = useStateValue() // can be destructured
     const { data } = UseGoogleSearch(state.term)
+    const newterm = state.term == data.queries.nextPage[0].searchTerms
     console.log(data)
     
     // MOCK API CALL
@@ -76,7 +77,7 @@ const SearchPage = () => {
 
             <div className="searchpage__results">
                 <p className="searchpage__results--count">
-                    {data ? 
+                    {data && !newterm ? 
                     <>
                         About {data?.searchInformation.formattedTotalResults} results 
                         ({data?.searchInformation.formattedSearchTime} seconds) for {state.term}
@@ -84,7 +85,7 @@ const SearchPage = () => {
                     }
                 </p>
 
-                {data ? data?.items.map(item => (
+                {data && !newterm ? data?.items.map(item => (
                     <div className="searchpage__result">
                         <a href={item.link} className="searchpage__result--a">
                             {(item.pagemap?.cse_image?.length > 0 &&
