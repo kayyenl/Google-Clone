@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStateValue } from '../StateProvider';
 import UseGoogleSearch from '../useGoogleSearch';
-import Response from '../Response'
 import { Link } from 'react-router-dom';
 import Search from '../components/Search';
 import SearchIcon from '@mui/icons-material/Search';
@@ -17,11 +16,6 @@ const SearchPage = () => {
     const [state, dispatch] = useStateValue() // can be destructured
     const { data } = UseGoogleSearch(state.term)
     const newterm = state.term !== data?.queries.nextPage[0].searchTerms
-    // console.log(data)
-    
-    // MOCK API CALL
-    // const data = null
-    // console.log(data)
 
     return (
         <div className='searchpage'>
@@ -94,7 +88,7 @@ const SearchPage = () => {
                                 src={item.pagemap.cse_image[0].src}>
                             </img>)
                             }
-                           <span className='searchpage__result--link'> {item.displayLink} > </span> 
+                           <span className='searchpage__result--link'> {item.displayLink} </span> 
                         </a>
 
                         <a href={item.link} 
