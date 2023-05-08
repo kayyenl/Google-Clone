@@ -19,7 +19,7 @@ const UseGoogleSearch = (term) => {
             const result = await fetch(
                 `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${term}`
             )
-            const fetchJson = await result.json()
+            const fetchJson = await result.json() 
             setData(fetchJson)
         }
 
